@@ -3,34 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "taiib_zadanie": {
+    "Kol1": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:class": {
-          "skipTests": true
-        },
-        "@schematics/angular:component": {
-          "skipTests": true
-        },
-        "@schematics/angular:directive": {
-          "skipTests": true
-        },
-        "@schematics/angular:guard": {
-          "skipTests": true
-        },
-        "@schematics/angular:interceptor": {
-          "skipTests": true
-        },
-        "@schematics/angular:pipe": {
-          "skipTests": true
-        },
-        "@schematics/angular:resolver": {
-          "skipTests": true
-        },
-        "@schematics/angular:service": {
-          "skipTests": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -38,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/taiib_zadanie",
+            "outputPath": "dist/kol1",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -54,7 +29,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -84,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "taiib_zadanie:build:production"
+              "buildTarget": "Kol1:build:production"
             },
             "development": {
-              "buildTarget": "taiib_zadanie:build:development"
+              "buildTarget": "Kol1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -117,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "675f36a8-8bbe-45a6-9e0b-28987b0e32e8"
   }
 }
