@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Cena</th>
+      <th>Data utworzenia</th>
+      <th>Liczba sztuk w koszyku</th>
+      <th>Dodaj do koszyka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products" [ngClass]="{'promocja': product.czyPromocja}">
+
+      <td>{{ product.nazwa }}</td>
+      <td>{{ product.cena }}</td>
+      <td>{{ product.dataUtworzenia }}</td>
+      <td>{{ product.liczbaSztuk }}</td>
+      <td>
+        <button (click)="dodajDoKoszyka(product)">Dodaj do koszyka</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
